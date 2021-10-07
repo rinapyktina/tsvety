@@ -8,4 +8,5 @@ tsvety v vaze demonstrate
 в то время как петли
 если/еще если/еще
 целые числа
+
 ![](https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/2c12324d-9cf7-4bec-aa4e-1adaefc86ba9/600x900)
