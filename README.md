@@ -43,3 +43,43 @@ from_
 body (это необязательно)
 
 - После того, как вы внесёте в код изменения, сохраните файл. Затем распакуйте архив aws_lambda_deploy.zip, замените файл whatsapp_messaging.py на ваш файл с тем же именем, после чего снова упакуйте всё в .zip-архив. Смысл этих действий сводится к тому, чтобы внести в код ваши учётные данные и сведения о тех, кому вы хотите отправлять сообщения. Всё остальное в пакете, предназначенном для развёртывания на AWS, осталось неизменным. Теперь займёмся работой с AWS.
+
+# Python Random Module
+import random
+
+# Number of Variables
+attempts = 0
+
+# Choose a random number
+number = random.randint(1, 20)
+print("I am thinking of a number between 1 and 20.")
+
+# While the player's guesses is less then 6
+while attempts < 6:
+    guess = input("Take a guess: ")
+    guess = int(guess)
+
+    attempts += 1
+
+    # If the player's guess is too low
+    if guess < number:
+        print("Higher")
+
+    # If the player's guess is too high
+    if guess > number:
+        print("Lower")
+        
+    # If the player won, stop the loop
+    if guess == number:
+        break
+
+# If the player won
+if guess == number:
+    attempts = str(attempts)
+    print(f"Good job! You guessed my number in {attempts} guesses!")
+
+# If the player lost
+if guess != number:
+    number = str(number)
+    print(f"Nope. The number I was thinking of was {number}")
+
